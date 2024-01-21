@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
-import IcardiWanda from "./pages/Icardiwanda/IcardiWanda";
+import Manitpage from "./pages/manit-page/Manitpage";
 
 function App() {
   return (
     <React.Fragment>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/icardi-wanda" element={<IcardiWanda />} />
+        <Route path="/icardi-wanda" element={<Manitpage />} />
       </Routes>
     </React.Fragment>
   );
