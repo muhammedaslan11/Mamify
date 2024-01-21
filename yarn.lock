@@ -1937,6 +1937,11 @@ pirates@^4.0.1:
   resolved "https://registry.npmjs.org/pirates/-/pirates-4.0.6.tgz"
   integrity sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==
 
+pocketbase@^0.20.3:
+  version "0.20.3"
+  resolved "https://registry.npmjs.org/pocketbase/-/pocketbase-0.20.3.tgz"
+  integrity sha512-qembHhE7HumDBZpxWgFIbhJPeaCoUIdwhW59xF/VlMR79pDTYz/LaQ4q89y7GczKo4X9actFgFN8hs4dTl0spQ==
+
 postcss-import@^15.1.0:
   version "15.1.0"
   resolved "https://registry.npmjs.org/postcss-import/-/postcss-import-15.1.0.tgz"
