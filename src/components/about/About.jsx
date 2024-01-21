@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import About_bg from "../../assets/about-bg.png"
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -13,8 +14,7 @@ const About = () => {
       <section
         id="about"
         style={{
-          backgroundImage:
-            "url(http://burakveaylin.bizimsayfamiz.com/wp-content/uploads/2019/09/background-galeri-1900x1266.jpg)",
+          backgroundImage: `url(${About_bg})`,
         }}
         className="bg-shadow -z-[-1] about-parent flex w-screen h-fit py-24 justify-around items-center text-center bg-cover max-w-full relative"
       >

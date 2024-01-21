@@ -9,6 +9,8 @@ const Homepage = () => {
       setData(storedValues);
     }
   }, [])
+  // https://images.pexels.com/photos/3964363/pexels-photo-3964363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+  // https://img.freepik.com/free-photo/3d-render-spotlights-grunge-brick-wall_1048-6284.jpg
   const [values, setValues] = useState({
     boyName: "İcardi",
     girlName: "Wanda",

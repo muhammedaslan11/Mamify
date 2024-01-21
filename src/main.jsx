@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Manitpage from './pages/manit-page/Manitpage.jsx';
+import Pbtest from './pages/pb-test-page/Pbtest.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')!).render(
 //   <React.StrictMode>
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/icardi-wanda",
     element: <Manitpage />,
+  },
+  {
+    path: "/pb",
+    element: <Pbtest />,
   },
  
 ]);

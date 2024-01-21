@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/home-page/Homepage.jsx"
 import Manitpage from "./pages/manit-page/Manitpage.jsx"
+import Pbtest from "./pages/pb-test-page/Pbtest.jsx";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/icardi-wanda" element={<Manitpage />} />
+        <Route path="/pb" element={<Pbtest />} />
       </Routes>
     </React.Fragment>
   );
