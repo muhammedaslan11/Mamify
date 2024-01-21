@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage/Homepage";
-import Manitpage from "./pages/manit-page/Manitpage";
+import Homepage from "./pages/homepage/Homepage.jsx";
+import Manitpage from "./pages/manit-page/Manitpage.jsx";
+
 
 function App() {
   return (
