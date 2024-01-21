@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Icardiwanda from './pages/Icardiwanda/IcardiWanda.jsx';
+import IcardiWanda from "./pages/Icardiwanda/Icardiwanda.jsx";
 
 // ReactDOM.createRoot(document.getElementById('root')!).render(
 //   <React.StrictMode>
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/icardi-wanda",
-    element: <Icardiwanda />,
+    element: <IcardiWanda />,
   },
  
 ]);
