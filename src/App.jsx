@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage/Homepage";
+import Homepage from "./pages/homepage/Homepage";
 import Manitpage from "./pages/manit-page/Manitpage";
 
 function App() {
