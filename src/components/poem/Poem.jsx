@@ -1,4 +1,5 @@
 import React from "react";
+import Poem_bg from "../../assets/poem-bg.jpg"
 
 const Poempart = () => {
   return (
@@ -7,8 +8,7 @@ const Poempart = () => {
         id="poempart"
         className="bg-shadow w-screen -z-[-1] h-fit bg-cover min-h-screen flex flex-col justify-center items-center gap-6 relative"
         style={{
-          backgroundImage:
-            "url(http://burakveaylin.bizimsayfamiz.com/wp-content/uploads/2019/09/love-background-005-1400x875.jpg)",
+          backgroundImage: `url(${Poem_bg})`,
         }}
       >
         <div className="text-white text-4xl border-y-4	border-white py-2">
