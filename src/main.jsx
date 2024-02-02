@@ -18,13 +18,14 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/icardi-wanda",
-    element: <Manitpage />,
-  },
-  {
     path: "/pb",
     element: <Pbtest />,
   },
+  {
+    path: `/:id`,
+    element: <Manitpage />,
+  },
+ 
  
 ]);
 

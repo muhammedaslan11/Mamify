@@ -3,27 +3,15 @@ import { Link } from "react-router-dom";
 import { pb } from "../../lib/pocketbase/Pocketbase";
 
 const Pbtest = () => {
-  const [formData, setFormData] = useState(new FormData());
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    formData.append(name, value);
-  };
-
-  const handleFileChange = (e) => {
-    const fileInput = e.target;
-    for (let file of fileInput.files) {
-      formData.append('documents', file);
-    }
-  };
-
+  // const [formData, setFormData] = useState(new FormData());
   const handleFormSubmit = async (e) => {
+    const data = new FormData(
+      e.target
+    )
     e.preventDefault();
     try {
-      const createdRecord = await createRecord('mamify_test', formData);
-      // İşlemlerin devamını buraya ekleyebilirsiniz
+      const createdRecord = await createRecord('mamify_test', data);
     } catch (error) {
-      // Hata durumunda yapılacak işlemleri buraya ekleyebilirsiniz
       console.error("Error during form submission:", error);
     }
   };
@@ -63,7 +51,6 @@ const Pbtest = () => {
               name="boyName"
               className="text-black"
               type="text"
-              onChange={handleInputChange}
             />
           </div>
           <div className=" border-2 border-black">
@@ -74,7 +61,6 @@ const Pbtest = () => {
               name="girlName"
               className="text-black"
               type="text"
-              onChange={handleInputChange}
             />
           </div>
           <div className=" border-2 border-black">
@@ -86,7 +72,7 @@ const Pbtest = () => {
               id="fileInputBanner"
               type="file"
               className="flex text-black"
-              onChange={handleFileChange}
+         
             />
           </div>
           <div className=" border-2 border-black">
@@ -98,7 +84,7 @@ const Pbtest = () => {
               id="fileInputBoyImage"
               type="file"
               className="flex text-black"
-              onChange={handleFileChange}
+             
             />
           </div>
           <div className=" border-2 border-black">
@@ -110,7 +96,6 @@ const Pbtest = () => {
               id="fileInputGirlImage"
               type="file"
               className="flex text-black"
-              onChange={handleFileChange}
             />
           </div>
           <button type="submit" className="font-bold bg-blue-500">

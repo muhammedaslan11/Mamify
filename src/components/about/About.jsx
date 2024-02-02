@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import About_bg from "../../assets/about-bg.png"
+import { imageUrl } from "../../lib/pocketbase/Pocketbase";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ const About = () => {
           <img
             className="w-full h-full"
             src={
-              `${data.boyImage}` ||
+              `${imageUrl}${data.boyImage}` ||
               "https://s1.eestatic.com/2020/02/19/elbernabeu/el_bernabeu_468715483_145905305_1706x960.jpg"
             }
             alt=""
@@ -58,7 +59,7 @@ const About = () => {
           <img
             className="w-full h-full"
             src={
-              `${data.girlImage}` ||
+              `${imageUrl}${data.girlImage}` ||
               "https://www.voici.fr/imgre/fit/~1~voi~2021~10~21~79650cf4-c939-4e81-b37f-b070fde91a15.jpeg/5760x3840/quality/80/wanda-nara.jpeg"
             }
             alt=""

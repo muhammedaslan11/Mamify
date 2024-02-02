@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import Menu from "../menu/Menu";
 import 'animate.css';
+import { imageUrl } from "../../lib/pocketbase/Pocketbase";
 
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
@@ -15,7 +16,7 @@ const Hero = () => {
   const switcher = () => {
     setOpen(!isOpen);
   };
-  console.log("data",data)
+  // console.log("data",data)
   return (
     <React.Fragment>
       {isOpen && <Menu setClose={switcher}/>}
@@ -30,7 +31,7 @@ const Hero = () => {
         className="w-full h-screen relative bg-cover bg-no-repeat bg-center"
         style={{
           backgroundImage:
-          `url(${data.bannerImage})`,
+          `url(${imageUrl}${data.bannerImage})`,
         }}
       ></section>
       <div

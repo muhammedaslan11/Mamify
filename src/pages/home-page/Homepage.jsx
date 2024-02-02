@@ -6,21 +6,21 @@ const Homepage = () => {
   useEffect(() => {
     const storedValues = JSON.parse(localStorage.getItem("manits"));
     if (storedValues) {
-      setData(storedValues);
+      setData(storedValues);  
     }
   }, [])
   // https://images.pexels.com/photos/3964363/pexels-photo-3964363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
   // https://img.freepik.com/free-photo/3d-render-spotlights-grunge-brick-wall_1048-6284.jpg
-  const [values, setValues] = useState({
-    boyName: "İcardi",
-    girlName: "Wanda",
-    bannerImage:
-      "https://iaspr.tmgrup.com.tr/album/2023/11/08/mauro-icardinin-esi-wanda-naradan-hastalik-aciklamasi-iste-son-durumu-1699457705520.jpg",
-      boyImage: "https://s1.eestatic.com/2020/02/19/elbernabeu/el_bernabeu_468715483_145905305_1706x960.jpg",
-      girlImage: "https://www.voici.fr/imgre/fit/~1~voi~2021~10~21~79650cf4-c939-4e81-b37f-b070fde91a15.jpeg/5760x3840/quality/80/wanda-nara.jpeg",
-  });
-  localStorage.setItem("manits", JSON.stringify(values));
-  console.log("object", values);
+  // const [values, setValues] = useState({
+  //   boyName: "İcardi",
+  //   girlName: "Wanda",
+  //   bannerImage:
+  //     "https://iaspr.tmgrup.com.tr/album/2023/11/08/mauro-icardinin-esi-wanda-naradan-hastalik-aciklamasi-iste-son-durumu-1699457705520.jpg",
+  //     boyImage: "https://s1.eestatic.com/2020/02/19/elbernabeu/el_bernabeu_468715483_145905305_1706x960.jpg",
+  //     girlImage: "https://www.voici.fr/imgre/fit/~1~voi~2021~10~21~79650cf4-c939-4e81-b37f-b070fde91a15.jpeg/5760x3840/quality/80/wanda-nara.jpeg",
+  // });
+  // localStorage.setItem("manits", JSON.stringify(values));
+  // console.log("object", values);
   return (
     <React.Fragment>
       <div

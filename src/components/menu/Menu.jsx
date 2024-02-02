@@ -1,37 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 
 const Menu = ({ setClose }) => {
-  const images = [
-    {
-      image:
-        "https://images.pexels.com/photos/4172878/pexels-photo-4172878.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/4688504/pexels-photo-4688504.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/6596901/pexels-photo-6596901.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/7905373/pexels-photo-7905373.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/7931553/pexels-photo-7931553.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/5911273/pexels-photo-5911273.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/6401609/pexels-photo-6401609.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-  ];
+  const [sliderImages, setSliderImages] = useState([]);
+
+  useEffect(() => {
+    try {
+      const storedValues = JSON.parse(localStorage.getItem("manits"));
+      if (storedValues && storedValues.menuSliderImages) {
+        setSliderImages(storedValues.menuSliderImages);
+        console.log("object", storedValues.menuSliderImages);
+      }
+    } catch (error) {
+      console.error("Error parsing JSON from localStorage:", error);
+    }
+  }, []);
+
+  // const images = [
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/4172878/pexels-photo-4172878.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/4688504/pexels-photo-4688504.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/6596901/pexels-photo-6596901.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/7905373/pexels-photo-7905373.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/7931553/pexels-photo-7931553.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/5911273/pexels-photo-5911273.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  //   {
+  //     image:
+  //       "https://images.pexels.com/photos/6401609/pexels-photo-6401609.jpeg?auto=compress&cs=tinysrgb&w=600",
+  //   },
+  // ];
   return (
     <React.Fragment>
       {/* style */}
@@ -39,7 +53,7 @@ const Menu = ({ setClose }) => {
         body {
           overflow: hidden;
         }
-        .menu-parent{
+        .menu-parent {
           background-color: #ec0201;
         }
         .container {
@@ -160,13 +174,18 @@ const Menu = ({ setClose }) => {
       <div className="menu-parent fixed top-0 left-0 w-screen h-screen bg-red-600 z-30">
         <div className="wrapper-images">
           <div className="images-line">
-            {images.map((item, index) => (
-              <div
-                key={index}
-                className="line"
-                style={{ backgroundImage: `url(${item.image})` }}
-              />
-            ))}
+            {sliderImages.map((item, index) => {
+              console.log("wqwqw", item);
+              return (
+                <div
+                  key={index}
+                  className="line"
+                  style={{
+                    backgroundImage: `url(https://mahe-english.fly.dev/api/files/f0vyhe26igz3zbn/wqy7ja91fv59v76/${item})`,
+                  }}
+                />
+              );
+            })}
           </div>
           {/* Diğer images-line'ları ekleyin */}
         </div>
@@ -175,11 +194,46 @@ const Menu = ({ setClose }) => {
             <img src={logo} alt="Natural Pet Bakery" />
           </div>
           <nav className="menu">
-            <a onClick={()=> {setClose(false)}} href="#hero">Giriş Ekranı</a>
-            <a onClick={()=> {setClose(false)}} href="#about">Bizim Hakkımızda</a>
-            <a onClick={()=> {setClose(false)}} href="#poempart">Sana Özel Şiir</a>
-            <a onClick={()=> {setClose(false)}} href="#hero">Aşkımızın Filmi...</a>
-            <a onClick={()=> {setClose(false)}} href="#hero">Teşekkür...</a>
+            <a
+              onClick={() => {
+                setClose(false);
+              }}
+              href="#hero"
+            >
+              Giriş Ekranı
+            </a>
+            <a
+              onClick={() => {
+                setClose(false);
+              }}
+              href="#about"
+            >
+              Bizim Hakkımızda
+            </a>
+            <a
+              onClick={() => {
+                setClose(false);
+              }}
+              href="#poempart"
+            >
+              Sana Özel Şiir
+            </a>
+            <a
+              onClick={() => {
+                setClose(false);
+              }}
+              href="#hero"
+            >
+              Aşkımızın Filmi...
+            </a>
+            <a
+              onClick={() => {
+                setClose(false);
+              }}
+              href="#hero"
+            >
+              Teşekkür...
+            </a>
           </nav>
         </div>
       </div>
